@@ -16,7 +16,10 @@
             <Image Source =" C:\Users\frodo\Pictures\Nueva carpeta\pencil-icon.png" />
         </Button>
 
-        <Button x:Name="Btn2" Content="Button" Canvas.Left="10" Canvas.Top="90" Width="36" Height="40" RenderTransformOrigin="0.556,0.5" BorderBrush="#FFAC1111"/>
+        <Button x:Name="Btn2"  Canvas.Left="10" Canvas.Top="90" Width="36" Height="40" RenderTransformOrigin="0.556,0.5" BorderBrush="#FFAC1111" Click="Btn2_Click">
+            <Image Source="C:\Users\frodo\Pictures\Nueva carpeta\rct.png"/>
+        </Button>
+        
         <Button x:Name="Btn13" Content="Button" Canvas.Left="10" Canvas.Top="130" Width="36" Height="40" BorderBrush="#FFAC1111"/>
         <Button x:Name="Btn3" Content="Button" Canvas.Left="10" Canvas.Top="170" Width="36" Height="40" BorderBrush="#FFAC1111"/>
         <Button x:Name="Btn4" Content="Button" Canvas.Left="10" Canvas.Top="210" Width="36" Height="40" BorderBrush="#FFAC1111"/>
