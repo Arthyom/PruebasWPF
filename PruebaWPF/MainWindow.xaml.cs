@@ -47,6 +47,9 @@ namespace PruebaWPF
 
         private void button1_Click_1(object sender, RoutedEventArgs e)
         {
+
+            MessageBox.Show(e.OriginalSource.ToString());
+
             // crear un rectangulo
             Rectangle r = new Rectangle();
 
@@ -89,6 +92,7 @@ namespace PruebaWPF
             // dibujar una linea
             MessageBox.Show("Dibujando Linea");
             Line Linea1 = new Line();
+            Linea1.Name = "linea1";
             Linea1.Stroke = System.Windows.Media.Brushes.Azure;
             Linea1.X1 = 1; Linea1.Y1 = 1;
             Linea1.X2 = 100; Linea1.Y2 = 40;
@@ -145,6 +149,12 @@ namespace PruebaWPF
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
+      
+
+
+
+
+
             // ir al formulario 2 
             Ventana2 V2 = new Ventana2();
             V2.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));

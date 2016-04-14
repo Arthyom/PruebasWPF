@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Ventana2" Height="470" Width="639" Loaded="Window_Loaded">
     <Canvas x:Name ="BntsDer" HorizontalAlignment="Left" Height="432" Margin="0,3,0,0" VerticalAlignment="Top" Width="94" Background="#FF3C3636">
-        <Canvas x:Name="LnsDibujo" Height="430" Canvas.Left="100" Width="530" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"/>
+        <Canvas x:Name="LnsDibujo"   Height="430" Canvas.Left="100" Width="530" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" TouchDown="MyEventoToque_TouchDown"/>
         <Button x:Name="Btn0"  Canvas.Left="10" Canvas.Top="10" Width="36" Height="40" BorderBrush="#FFAC1111" Background="#FFDDDDDD" Click="Btn0_Click">
             <Image Source ="C:\Users\frodo\Pictures\Nueva carpeta\pen.png"/>
         </Button>
@@ -20,7 +20,7 @@
             <Image Source="C:\Users\frodo\Pictures\Nueva carpeta\rct.png"/>
         </Button>
         
-        <Button x:Name="Btn13" Content="Button" Canvas.Left="10" Canvas.Top="130" Width="36" Height="40" BorderBrush="#FFAC1111"/>
+        <Button x:Name="Btn13" Content="Button" Canvas.Left="10" Canvas.Top="130" Width="36" Height="40" BorderBrush="#FFAC1111" Click="Btn13_Click"/>
         <Button x:Name="Btn3" Content="Button" Canvas.Left="10" Canvas.Top="170" Width="36" Height="40" BorderBrush="#FFAC1111"/>
         <Button x:Name="Btn4" Content="Button" Canvas.Left="10" Canvas.Top="210" Width="36" Height="40" BorderBrush="#FFAC1111"/>
         <Button x:Name="Btn5" Content="Button" Canvas.Left="46" Canvas.Top="10" Width="36" Height="40" BorderBrush="#FFAC1111"/>
@@ -28,6 +28,10 @@
         <Button x:Name="Btn7" Content="Button" Canvas.Left="46" Canvas.Top="90" Width="36" Height="40" BorderBrush="#FFAC1111"/>
         <Button x:Name="Btn8" Content="Button" Canvas.Left="46" Canvas.Top="130" Width="36" Height="40" BorderBrush="#FFAC1111"/>
         <Button x:Name="Btn9" Content="Button" Canvas.Left="46" Canvas.Top="170" Width="36" Height="40" BorderBrush="#FFAC1111"/>
-        <Button x:Name="Btn10" Content="Button" Canvas.Left="46" Canvas.Top="210" Width="36" Height="40" BorderBrush="#FFAC1111"/>
+        
+        <!-- implementar eventos propios desde el xaml -->
+        <!-- Concectarse al evento qe se ha definido en el codigo mediante el uso de propuedades -->
+        <Button x:Name="Btn10" Content="Button" Canvas.Left="46" Canvas.Top="210" Width="36" Height="40" BorderBrush="#FFAC1111" Click="MiClik_Click"/>
+
     </Canvas>
 </Window>
