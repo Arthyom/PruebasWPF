@@ -129,6 +129,24 @@ namespace PruebaWPF
         {
             // mostrar mensajes cada que se toque el canvas 
             MessageBox.Show("SE HA TOCADO EL CANVAS", "TOCANDO", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // crear puntos de toque
+            TouchPoint PuntoToque = e.GetTouchPoint(this.LnsDibujo);
+           
+            Point tp = new Point(PuntoToque.Position.X, PuntoToque.Position.Y);
+
+            Line linea = new Line();
+            linea.X1 = tp.X;
+            linea.Y1 = tp.Y;
+
+            // meter en el canvas
+            this.LnsDibujo.Children.Add(linea);
+
+
+            
+
+
+            
             
         }
 
