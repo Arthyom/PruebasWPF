@@ -1,0 +1,36 @@
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\bin\Debug\PruebaWPF.exe.config
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\bin\Debug\PruebaWPF.exe
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\bin\Debug\PruebaWPF.pdb
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF.csprojResolveAssemblyReference.cache
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\MainWindow.g.cs
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\App.g.cs
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF_MarkupCompile.cache
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF_MarkupCompile.lref
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\MainWindow.baml
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF.g.resources
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF.Properties.Resources.resources
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF.csproj.GenerateResource.Cache
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF.exe
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\PruebaWPF.pdb
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\Window2.g.cs
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\Window2.baml
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\Ventana2.g.cs
+C:\Users\frodo\Documents\Proyectos\C#\PruebaWPF\PruebaWPF\obj\Debug\Ventana2.baml
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\bin\Debug\PruebaWPF.exe.config
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.exe
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.pdb
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.csprojResolveAssemblyReference.cache
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\MainWindow.g.cs
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Ventana2.g.cs
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Window2.g.cs
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\App.g.cs
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF_MarkupCompile.cache
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF_MarkupCompile.lref
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\bin\Debug\PruebaWPF.exe
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\bin\Debug\PruebaWPF.pdb
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\MainWindow.baml
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Ventana2.baml
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Window2.baml
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.g.resources
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.Properties.Resources.resources
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.csproj.GenerateResource.Cache
