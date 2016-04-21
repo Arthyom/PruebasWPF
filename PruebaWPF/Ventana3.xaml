@@ -1,0 +1,19 @@
+﻿<Window x:Class="PruebaWPF.Ventana3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PruebaWPF"
+        mc:Ignorable="d"
+        Title="Ventana3" Height="602" Width="724" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,-6">
+        <StackPanel Name="PilaContenedor" HorizontalAlignment="Left" Height="495" VerticalAlignment="Top" Width="716" Margin="0,10,0,0">
+            <InkCanvas x:Name="LiensoTinta" Height="485" Background="Black" Margin="25,0,36,0" MouseMove="DibujarDedo_TouchMove" MouseUp="InsertarTrazo"/>
+
+
+        </StackPanel>
+        <Button x:Name="BtnCambiaColor" Content="CambiarColor" Margin="30,522,481,19" Click="BtnCambiaColor_Click"/>
+        <Slider x:Name="SldrGrosorTrazo" HorizontalAlignment="Left" Margin="315,522,0,0" VerticalAlignment="Top" Width="350" Minimum="1" LargeChange="0"/>
+
+    </Grid>
+</Window>

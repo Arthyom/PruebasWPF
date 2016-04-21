@@ -149,14 +149,8 @@ namespace PruebaWPF
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-      
-
-
-
-
-
             // ir al formulario 2 
-            Ventana2 V2 = new Ventana2();
+            Ventana3 V2 = new Ventana3();
             V2.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
             
             this.Close();

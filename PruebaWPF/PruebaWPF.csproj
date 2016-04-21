@@ -58,6 +58,9 @@
     <Compile Include="Ventana2.xaml.cs">
       <DependentUpon>Ventana2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana3.xaml.cs">
+      <DependentUpon>Ventana3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Ventana2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

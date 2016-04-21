@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Ventana2" Height="470" Width="639" Loaded="Window_Loaded">
     <Canvas x:Name ="BntsDer" HorizontalAlignment="Left" Height="432" Margin="0,3,0,0" VerticalAlignment="Top" Width="94" Background="#FF3C3636">
-        <Canvas x:Name="LnsDibujo"   Height="430" Canvas.Left="100" Width="530" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" TouchDown="MyEventoToque_TouchDown"/>
+        <Canvas x:Name="LnsDibujo"   Height="430" Canvas.Left="100" Width="530" Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" TouchDown="MyEventoToque_TouchDown" MouseDown="MyDibujoRaton_MouseDown"  MouseUp="MyDibujoRaton_MouseUp" MouseMove="MyDibujoRaton_MouseMove"/>
         <Button x:Name="Btn0"  Canvas.Left="10" Canvas.Top="10" Width="36" Height="40" BorderBrush="#FFAC1111" Background="#FFDDDDDD" Click="Btn0_Click">
             <Image Source ="C:\Users\frodo\Pictures\Nueva carpeta\pen.png"/>
         </Button>

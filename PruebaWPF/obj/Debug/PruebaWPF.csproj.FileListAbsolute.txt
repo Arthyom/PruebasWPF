@@ -34,3 +34,5 @@ C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Window2.baml
 C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.g.resources
 C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.Properties.Resources.resources
 C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.csproj.GenerateResource.Cache
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Ventana3.g.cs
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Ventana3.baml

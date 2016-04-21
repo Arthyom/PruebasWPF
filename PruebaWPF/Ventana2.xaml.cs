@@ -19,6 +19,9 @@ namespace PruebaWPF
     /// </summary>
     public partial class Ventana2 : Window
     {
+        private PointCollection Linea = new PointCollection();
+        private TouchPointCollection LineaTactil = new TouchPointCollection();
+        private Polygon Poligono = new Polygon();
 
         /************************************************************************************/
         /*                     metodos graficos para el raton                               */
@@ -28,8 +31,6 @@ namespace PruebaWPF
             Cursor CursorNuevo = Cursors.Cross;
             Mouse.OverrideCursor = CursorNuevo;
         }
-
-
 
         public Ventana2()
         {
@@ -77,7 +78,7 @@ namespace PruebaWPF
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // cambiar de color los botones
-            
+
         }
 
         // comenzar la manípulacion de la las formas 
@@ -105,7 +106,7 @@ namespace PruebaWPF
             // aplicar los cambios al rectangulo
             Rget.RenderTransform = new MatrixTransform(RgetMatrix);
 
-            Rect contenedor = new Rect( ( (FrameworkElement)e.ManipulationContainer).RenderSize );
+            Rect contenedor = new Rect(((FrameworkElement)e.ManipulationContainer).RenderSize);
             Rect formsLado = Rget.RenderTransform.TransformBounds(new Rect(Rget.RenderSize));
 
         }
@@ -127,31 +128,57 @@ namespace PruebaWPF
         // crear un evento de toque para el econtrol canvzas
         private void MyEventoToque_TouchDown(object sender, TouchEventArgs e)
         {
-            // mostrar mensajes cada que se toque el canvas 
-            MessageBox.Show("SE HA TOCADO EL CANVAS", "TOCANDO", MessageBoxButton.OK, MessageBoxImage.Information);
+            InkCanvas Inkc = new InkCanvas();
 
-            // crear puntos de toque
+            Inkc.Background = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            Inkc.Width = 300;
+            Inkc.Height = 300;
+
+
+            // mostrar mensajes cada que se toque el canvas 
+            // MessageBox.Show("SE HA TOCADO EL CANVAS", "TOCANDO", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // crear puntos de toque como una linea de un solo punto
             TouchPoint PuntoToque = e.GetTouchPoint(this.LnsDibujo);
-           
+
             Point tp = new Point(PuntoToque.Position.X, PuntoToque.Position.Y);
 
             Line linea = new Line();
             linea.X1 = tp.X;
             linea.Y1 = tp.Y;
 
+            linea.X2 = tp.X - 1;
+            linea.Y2 = tp.Y - 1;
+
+            linea.Stroke = Brushes.Red;
+            linea.StrokeThickness = 2;
+
             // meter en el canvas
             this.LnsDibujo.Children.Add(linea);
 
-
-            
-
-
-            
-            
         }
 
+        // recolectar los puntos de la entrada tactil
+        private void MyEventoToqueDibujo_TouchMove(object sender, TouchEventArgs e)
+        {
+            TouchPoint PuntoMovimiento = e.GetTouchPoint(this.LnsDibujo);
+            Point PuntoAlterno = new Point(PuntoMovimiento.Bounds.X, PuntoMovimiento.Bounds.Y);
 
+            this.LineaTactil.Add(PuntoMovimiento);
+            this.Linea.Add(PuntoAlterno);
 
+            this.Poligono.Points = this.Linea;
+            this.LnsDibujo.Children.Add(this.Poligono);
+          
+        }
+        
+        // imprimir la linea touch
+        private void MyEventoSoltarToque_TouchUp(object sender, TouchEventArgs e)
+        {
+            
+
+        }
+        
 
         /************************************************************************************/
         /*                                    metodos variados                              */
@@ -211,6 +238,72 @@ namespace PruebaWPF
         }
 
         private void LnsDibujo_TouchDown(object sender, TouchEventArgs e)
+        {
+
+        }
+
+        // intentar dibuhar una linea en el cambas usando el raton 
+        private void MyDibujoRaton_MouseDown ( object sender, MouseButtonEventArgs e)
+        {
+            
+            // cada que se de de clic en el cambas se ha de guardar un punto en el vector
+            //this.Linea = new PointCollection();
+
+            /*
+            Point PuntoToque = e.GetPosition(this.LnsDibujo);
+            MessageBox.Show("Se ha hecho clict"+ PuntoToque.X.ToString() + PuntoToque.Y.ToString());
+
+            //Point PuntoClic = new Point(PuntoToque.X, PuntoToque.Y);
+
+            Linea.Add(PuntoToque);
+           */
+
+        }
+
+        // recolectar la posicion del raton
+        private void MyDibujoRaton_MouseMove (object sender, MouseEventArgs e)
+        {
+
+            Point PuntoRatonMove = e.GetPosition(this.LnsDibujo);
+            this.Linea.Add(PuntoRatonMove);
+
+            /*
+             Polygon pl = new Polygon();
+             pl.Stroke = Brushes.Black;
+             pl.StrokeThickness = 2;
+
+             Point PuntoMovimiento = e.GetPosition(this.LnsDibujo);
+
+             this.Linea.Add(PuntoMovimiento);
+             pl.Points.Add(this
+
+             this.LnsDibujo.Children.Add(pl);
+            */
+
+        }
+
+        private void MyDibujoRaton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Se ha soltado el raton");
+
+            // dibujar la linea una vez que se ha soltado el dedo del raton
+            Polygon plgn = new Polygon();
+            plgn.Points = this.Linea;
+          
+            plgn.Stroke = Brushes.Black;
+            plgn.StrokeThickness = 4;
+            Point puntoFinal = e.GetPosition(this.LnsDibujo);
+            /*
+            plgn.Points.Add(puntoFinal);
+            
+            MessageBox.Show("Ya se solto el raton"+puntoFinal.X.ToString()+ puntoFinal.Y.ToString());
+            */
+            this.LnsDibujo.Children.Add(plgn);
+            return;
+
+        }
+
+        private void LnsDibujo_MouseUp(object sender, MouseButtonEventArgs e)
         {
 
         }
