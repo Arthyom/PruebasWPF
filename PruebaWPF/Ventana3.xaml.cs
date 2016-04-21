@@ -21,7 +21,7 @@ namespace PruebaWPF
     public partial class Ventana3 : Window
     {
 
-        Stroke TrazoTinta ;
+        Stroke TrazoTinta;
         StylusPointCollection ColeccionStylus = new StylusPointCollection();
         Double AnchoLinea;
 
@@ -37,30 +37,40 @@ namespace PruebaWPF
 
            la propiedad stroke, permite establecer un trazo simple dentro del ink canvas, la propiedad stroke es una instancia 
            de la clase Stroke, tiene solo dos constructores los dos sobrecargados y ninguno por defecto, su constructor mas simple
-           resive un punto definido por un stylus */
+           resive un punto definido por un stylus 
+           
+            https://msdn.microsoft.com/es-es/library/system.windows.ink.stroke(v=vs.100).aspx
+            https://msdn.microsoft.com/es-es/library/system.windows.ink(v=vs.100).aspx
+            https://msdn.microsoft.com/es-es/library/system.windows.controls.inkcanvas(v=vs.110).aspx
+
+            */
 
         // cargar los elementos necesarios en el formulario
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             InkCanvas LiensoTinta = new InkCanvas();
             LiensoTinta.Background = Brushes.Black;
-            
+
 
         }
 
+
+        /*************************************************************************************************************/
+        /*                                           METODOS DE TOQUE                                                */
+        /*************************************************************************************************************/
+
         // generar lineas mientras se mueva el dedo sobre el panel tactil
-        private void DibujarDedo_TouchMove ( object sender, MouseEventArgs e)
+        private void DibujarDedo_TouchMove(object sender, MouseEventArgs e)
         {
-            Cursor NuevoCursor = Cursors.Cross;
-            Mouse.OverrideCursor = NuevoCursor;
-            
+            this.CambiarACruz();
+
             Point PuntoGenerico = e.GetPosition(this.LiensoTinta);
             StylusPoint PuntoToque = new StylusPoint(PuntoGenerico.X, PuntoGenerico.Y);
             this.ColeccionStylus.Add(PuntoToque);
         }
 
         // agregar el trazo al canvas en cuanto se suelte el raton
-        private void InsertarTrazo (object sender, MouseButtonEventArgs e)
+        private void InsertarTrazo(object sender, MouseButtonEventArgs e)
         {
             DrawingAttributes EstiloTrazo = new DrawingAttributes();
             EstiloTrazo.Color = Color.FromRgb(255, 255, 255);
@@ -69,10 +79,10 @@ namespace PruebaWPF
 
 
 
-            this.TrazoTinta = new Stroke(this.ColeccionStylus,EstiloTrazo);
+            this.TrazoTinta = new Stroke(this.ColeccionStylus, EstiloTrazo);
             this.LiensoTinta.Strokes.Add(this.TrazoTinta);
 
-            
+
         }
 
         // cambiar el color del trazo
@@ -84,9 +94,32 @@ namespace PruebaWPF
             this.TrazoTinta.StylusPoints.Clear();
             this.ColeccionStylus.Clear();
             */
-            
-           
-            
+
+
+
         }
+
+
+
+        /*************************************************************************************************************/
+        /*                                           METODOS MICELANEOS                                              */
+        /*************************************************************************************************************/
+        private void CambiarACruz()
+        {
+            Cursor Cros = Cursors.Cross;
+            Mouse.OverrideCursor = Cros;
+        }
+
+        private void CambiarAFlecha()
+        {
+            Cursor flecha = Cursors.Arrow;
+            Mouse.OverrideCursor = flecha;
+        }
+
+        private void EntrarEnControl_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.CambiarAFlecha();
+        }
+
     }
 }

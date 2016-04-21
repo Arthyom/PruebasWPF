@@ -12,8 +12,8 @@
 
 
         </StackPanel>
-        <Button x:Name="BtnCambiaColor" Content="CambiarColor" Margin="30,522,481,19" Click="BtnCambiaColor_Click"/>
-        <Slider x:Name="SldrGrosorTrazo" HorizontalAlignment="Left" Margin="315,522,0,0" VerticalAlignment="Top" Width="350" Minimum="1" LargeChange="0"/>
+        <Button x:Name="BtnCambiaColor" Content="CambiarColor" Margin="30,522,481,19" Click="BtnCambiaColor_Click" MouseEnter="EntrarEnControl_MouseEnter"/>
+        <Slider x:Name="SldrGrosorTrazo" HorizontalAlignment="Left" Margin="315,522,0,0" VerticalAlignment="Top" Width="350" Minimum="1" LargeChange="0" MouseEnter="EntrarEnControl_MouseEnter"/>
 
     </Grid>
 </Window>
