@@ -140,5 +140,37 @@ namespace PruebaWPF
 
             this.g2.Children.Add(pol);
         }
+
+        private void LeftDown(object sender, MouseButtonEventArgs e)
+        {
+
+            Point Pnt = e.GetPosition(g2);
+            Rectangle ReGl = new Rectangle
+            {
+                Stroke = Brushes.Orange,
+                Width = 30,
+                Height = 30
+            };
+            Canvas.SetLeft(ReGl, Pnt.X);
+            Canvas.SetTop(ReGl, Pnt.Y);
+            g2.Children.Add(ReGl);
+        }
+
+        private void RightDown(object sender, MouseButtonEventArgs e)
+        {
+            Point Tp = e.GetPosition(g2);
+            Line L1 = new Line
+            {
+                Stroke = Brushes.Tomato,
+                X1 = Tp.X,
+                Y1 = Tp.Y,
+                X2 = Tp.X + 3,
+                Y2 = Tp.Y + 3,
+
+                StrokeThickness = 4
+            };
+
+            g2.Children.Add(L1);
+        }
     }
 }
