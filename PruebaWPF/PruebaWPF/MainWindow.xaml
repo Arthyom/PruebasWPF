@@ -10,10 +10,10 @@
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top" Width="120" Height="40" Click="button_Click"/>
         <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="120" Height="40" Click="button1_Click_1"/>
         <Button x:Name="button1_Copy" Content="Button" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="120" Height="40" Click="button1_Copy_Click"/>
-        <Canvas x:Name="g2" HorizontalAlignment="Left" Height="300" Margin="165,0,-341,0" VerticalAlignment="Top" Width="335" Background="#FFFDFDFD">
+        <Canvas x:Name="g2" HorizontalAlignment="Left" Height="300" Margin="165,0,-341,0" VerticalAlignment="Top" Width="335" Background="#FFFDFDFD" MouseLeftButtonDown="LeftDown" MouseRightButtonDown="RightDown">
             <!-- dibujar una linea -->
-            <Line x:Name="Linea1" X1="0" Y1="0" X2="20" Y2=" 20" Stroke="Red" StrokeThickness="4"/>
-            <Ellipse x:Name="El1" Fill="Red"  Stroke="Aqua" Width="180" Height="190" StrokeThickness="4" Canvas.Left="115" Canvas.Top="30"/>
+            <Line x:Name="Linea1" X1="100" Y1="0" X2="100" Y2=" 300" Stroke="Brown" StrokeThickness="4"/>
+            <Ellipse x:Name="El1" Fill="Blue"  Stroke="Green" Width="180" Height="190" StrokeThickness="14" Canvas.Left="115" Canvas.Top="30"/>
         </Canvas>
         <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="20,145,0,0" VerticalAlignment="Top" Width="120" Height="35" Click="button2_Click"/>
 
