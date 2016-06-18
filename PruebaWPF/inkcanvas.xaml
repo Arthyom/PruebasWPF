@@ -1,0 +1,72 @@
+﻿<!-- 
+    WPF, un subsistema grafico del framework .net presenta posibilidades graficas 
+    muy altas, capacidades 3d, etc. Una de las principales caracteristicas del 
+    framework es la divicion entre disenio y codigo fuente, esta caracteristica es
+    provista por el codigo XAML, que es capas de serpar la parte logica y la
+    parte grafica de una alicacion 
+    
+    
+    
+-->
+<!-- elemento raiz del documento -->
+<Window x:Class="PruebaWPF.inkcanvas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PruebaWPF"
+        mc:Ignorable="d"
+        Title="inkcanvas" Height="300" Width="300">
+    <!-- 
+        ejemplo del uso del XAML para diseniar la interfas de usuario 
+     -->
+    <Grid Background="Red" Name="princ">
+        <ListBox Name="ListaTexto" Background="Aqua" Width="120" Height="120" >
+            <ListBoxItem Content="E1"></ListBoxItem>
+            <ListBoxItem Content="E2"></ListBoxItem>
+            <ListBoxItem Content="E3"></ListBoxItem>
+            <ListBoxItem Content="E4"></ListBoxItem>
+            <ListBoxItem Content="E5"></ListBoxItem>
+        </ListBox>
+
+        <Button Name="Blue" Height="50" Width="50" >
+            <Button.Content>
+                <Button Height="20" Width="30" Background="RoyalBlue"></Button>
+            </Button.Content>
+        </Button>
+
+        <ListBox Name="lst1" Width="200" Margin="10,4,82,195" >
+            <ListBox.Items>
+                <ListBoxItem>de</ListBoxItem>
+                <ListBoxItem>hd</ListBoxItem>
+            </ListBox.Items>
+        </ListBox>
+
+        <Button Name="evento" Height="100" Width="100" Margin="0,0,0,0"
+                Background="AntiqueWhite" Click="MyClick">
+        </Button>
+
+    </Grid>
+    
+    <!--
+        wpf es una tecnoliga que utiliza graficos vectoriales, es decir que se 
+        autojustan al tamanio de la pantalla para no perder la informacion de los
+        graficos. los principales contenedores del wpf son 
+    
+            canvas 
+            dockpanel
+            grid 
+            stack panel 
+            wraper panel 
+        
+        los controles comunes, se pueden subdividir en algunos tipos principales
+        pero no estan limitados unicamente a algunos controles
+            
+            listas, entrada, botones, layouts y documentos 
+        
+    -->
+
+
+   
+    
+</Window>

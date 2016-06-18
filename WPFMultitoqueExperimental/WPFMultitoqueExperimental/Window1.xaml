@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPFMultitoqueExperimental.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMultitoqueExperimental"
+        mc:Ignorable="d"
+        Title="Window1" Height="432" Width="564">
+
+    <!-- 
+        se crearan muestras de cada uno de los controles de layout 
+        mostrando las propiedades de cada uno de estos controles,
+        es de notarse que la mayor parte el trabajo grafico puede hacerse
+        desde el codigo xaml sin necesidad de usar el diseniador de visual 
+        studio
+    -->
+    <!-- 
+        dock panel 
+            puede usar propiedades de alineacion simples 
+            sin necesidad de usar margenes o padding absoluto
+    -->
+    <DockPanel Name="pnl1" Background="Black">
+        <Button Background="Red" Height="30" DockPanel.Dock="Bottom"></Button>
+        <Button Background="Yellow"  Height="30" DockPanel.Dock="Top"></Button>
+        <Button Background="Green" Width="30" DockPanel.Dock="Left"></Button>
+        <Button Background="Blue" Width="30" DockPanel.Dock="Right"></Button>
+        <Button Background="Aqua" ></Button>
+    </DockPanel>
+    
+    
+</Window>

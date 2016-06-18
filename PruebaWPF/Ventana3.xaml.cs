@@ -59,25 +59,16 @@ namespace PruebaWPF
         /*                                           METODOS DE TOQUE                                                */
         /*************************************************************************************************************/
 
-        // generar lineas mientras se mueva el dedo sobre el panel tactil
-        private void DibujarDedo_TouchMove(object sender, MouseEventArgs e)
-        {
-            this.CambiarACruz();
-
-            Point PuntoGenerico = e.GetPosition(this.LiensoTinta);
-            StylusPoint PuntoToque = new StylusPoint(PuntoGenerico.X, PuntoGenerico.Y);
-            this.ColeccionStylus.Add(PuntoToque);
-        }
-
-        // agregar el trazo al canvas en cuanto se suelte el raton
-        private void InsertarTrazo(object sender, MouseButtonEventArgs e)
+        
+        // agregar el trazo al canvas en cuanto se suelte el raton 
+        private void InsertarTrazoR(object sender, MouseButtonEventArgs e)
         {
             DrawingAttributes EstiloTrazo = new DrawingAttributes();
             EstiloTrazo.Color = Color.FromRgb(255, 255, 255);
             EstiloTrazo.Height = this.SldrGrosorTrazo.Value;
             EstiloTrazo.Width = this.SldrGrosorTrazo.Value;
 
-
+            
 
             this.TrazoTinta = new Stroke(this.ColeccionStylus, EstiloTrazo);
             this.LiensoTinta.Strokes.Add(this.TrazoTinta);
@@ -95,10 +86,35 @@ namespace PruebaWPF
             this.ColeccionStylus.Clear();
             */
 
-
+            
 
         }
 
+
+        
+        /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+       
+              // generar lineas mientras se mueva el dedo sobre el panel tactil
+        private void DibujarDedo_TouchMove(object sender, TouchEventArgs e)
+        {
+            this.CambiarACruz();
+
+            TouchPoint PuntoGenerico = e.GetTouchPoint(this.LiensoTinta);
+            StylusPoint PuntoToque = new StylusPoint(PuntoGenerico.Bounds.X, PuntoGenerico.Bounds.Y);
+            this.ColeccionStylus.Add(PuntoToque);
+        }
+
+        // agregar el trazo al canvas en cuanto se suelte el raton
+        private void InsertarTrazo_TouchUp(object sender, TouchEventArgs e)
+        {
+            DrawingAttributes EstiloTrazo = new DrawingAttributes();
+            EstiloTrazo.Color = Color.FromRgb(255, 255, 255);
+            EstiloTrazo.Height = this.SldrGrosorTrazo.Value;
+            EstiloTrazo.Width = this.SldrGrosorTrazo.Value;
+
+            this.TrazoTinta = new Stroke(this.ColeccionStylus, EstiloTrazo);
+            this.LiensoTinta.Strokes.Add(this.TrazoTinta);
+        }
 
 
         /*************************************************************************************************************/
@@ -116,7 +132,7 @@ namespace PruebaWPF
             Mouse.OverrideCursor = flecha;
         }
 
-        private void EntrarEnControl_MouseEnter(object sender, MouseEventArgs e)
+        private void EntrarEnControl_TouchEnter(object sender, TouchEventArgs e)
         {
             this.CambiarAFlecha();
         }

@@ -78,6 +78,7 @@ namespace PruebaWPF
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // cambiar de color los botones
+            
 
         }
 

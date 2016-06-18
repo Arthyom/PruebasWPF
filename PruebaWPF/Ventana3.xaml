@@ -8,12 +8,12 @@
         Title="Ventana3" Height="602" Width="724" Loaded="Window_Loaded">
     <Grid Margin="0,0,0,-6">
         <StackPanel Name="PilaContenedor" HorizontalAlignment="Left" Height="495" VerticalAlignment="Top" Width="716" Margin="0,10,0,0">
-            <InkCanvas x:Name="LiensoTinta" Height="485" Background="Black" Margin="25,0,36,0" MouseMove="DibujarDedo_TouchMove" MouseUp="InsertarTrazo"/>
+            <InkCanvas EditingMode="Ink" x:Name="LiensoTinta" Height="485" Background="Green" Margin="25,0,36,0" />
 
 
         </StackPanel>
-        <Button x:Name="BtnCambiaColor" Content="CambiarColor" Margin="30,522,481,19" Click="BtnCambiaColor_Click" MouseEnter="EntrarEnControl_MouseEnter"/>
-        <Slider x:Name="SldrGrosorTrazo" HorizontalAlignment="Left" Margin="315,522,0,0" VerticalAlignment="Top" Width="350" Minimum="1" LargeChange="0" MouseEnter="EntrarEnControl_MouseEnter"/>
+        <Button x:Name="BtnCambiaColor" Content="CambiarColor" Margin="30,522,481,19" Click="BtnCambiaColor_Click" TouchEnter="EntrarEnControl_TouchEnter"/>
+        <Slider x:Name="SldrGrosorTrazo" HorizontalAlignment="Left" Margin="315,522,0,0" VerticalAlignment="Top" Width="350" Minimum="1" LargeChange="0" TouchEnter="EntrarEnControl_TouchEnter"/>
 
     </Grid>
 </Window>

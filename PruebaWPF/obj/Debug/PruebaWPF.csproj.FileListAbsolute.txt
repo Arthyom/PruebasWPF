@@ -36,3 +36,7 @@ C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.Properties.
 C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.csproj.GenerateResource.Cache
 C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Ventana3.g.cs
 C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Ventana3.baml
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\Interop.mscoree.dll
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\PruebaWPF.csproj.ResolveComReference.cache
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\inkcanvas.g.cs
+C:\Users\frodo\Documents\Proyectos WPF\PruebaWPF\obj\Debug\inkcanvas.baml
